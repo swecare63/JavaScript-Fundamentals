@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Mahasiswa Interaktif | Rusly Tomagola</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="brand">Pemrograman Berbasis Web</p>
+      <button id="theme-toggle" class="btn btn-secondary" type="button" aria-pressed="false">Mode Gelap</button>
+    </div>
+  </header>
+
+  <main id="konten" class="container">
+
+    <section class="card profile-card" aria-labelledby="judul-profil">
+      <div class="profile-head">
+        <div class="avatar" aria-hidden="true">RT</div>
+        <div>
+          <p class="eyebrow">Profil Mahasiswa</p>
+          <h1 id="judul-profil">Rusly Tomagola</h1>
+          <p class="profile-line">NIM 26040770001</p>
+          <p class="profile-line">Fakultas Teknik Informatika, Universitas Muhammadiyah Jakarta</p>
+        </div>
+      </div>
+
+      <button id="toggle-profile" class="btn btn-primary" type="button"
+              aria-expanded="false" aria-controls="profile-extra">Tampilkan Profil Tambahan</button>
+
+      <div id="profile-extra" class="profile-extra" hidden>
+        <h2>Profil Tambahan</h2>
+        <dl class="info-list">
+          <div><dt>Mata Kuliah</dt><dd>Pemrograman Berbasis Web</dd></div>
+          <div><dt>Dosen Pengampu</dt><dd>Nurvelly Rosanti, M.Kom.</dd></div>
+          <div><dt>Materi</dt><dd>Meeting 4, JavaScript Fundamentals</dd></div>
+          <div><dt>Tugas</dt><dd>Interactive Student Profile (Assignment 4)</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="grid-two">
+
+      <section class="card" aria-labelledby="judul-sapaan">
+        <h2 id="judul-sapaan">Sapaan Personal</h2>
+        <form id="greeting-form" novalidate>
+          <label for="name-input">Nama Anda</label>
+          <input id="name-input" name="nama" type="text" autocomplete="name" placeholder="Contoh: Andi">
+          <button class="btn btn-primary" type="submit">Tampilkan Sapaan</button>
+        </form>
+        <p id="greeting-message" class="message" role="status" data-state="neutral">Masukkan nama Anda, lalu tekan tombol.</p>
+      </section>
+
+      <section class="card" aria-labelledby="judul-kalkulator">
+        <h2 id="judul-kalkulator">Kalkulator Nilai</h2>
+        <form id="score-form" novalidate>
+          <div class="score-fields">
+            <div>
+              <label for="score1">Nilai 1</label>
+              <input id="score1" name="nilai1" type="text" inputmode="decimal" autocomplete="off" placeholder="0 sampai 100">
+            </div>
+            <div>
+              <label for="score2">Nilai 2</label>
+              <input id="score2" name="nilai2" type="text" inputmode="decimal" autocomplete="off" placeholder="0 sampai 100">
+            </div>
+            <div>
+              <label for="score3">Nilai 3</label>
+              <input id="score3" name="nilai3" type="text" inputmode="decimal" autocomplete="off" placeholder="0 sampai 100">
+            </div>
+          </div>
+          <div class="button-row">
+            <button class="btn btn-primary" type="submit">Hitung Rata-rata</button>
+            <button id="reset-button" class="btn btn-secondary" type="button">Reset</button>
+          </div>
+        </form>
+
+        <ul id="score-error" class="message error-list" role="alert" data-state="error" hidden></ul>
+
+        <div class="result-grid">
+          <div class="result-box">
+            <p class="result-label">Rata-rata</p>
+            <p id="average-output" class="result-value">Belum dihitung</p>
+          </div>
+          <div class="result-box">
+            <p class="result-label">Pesan hasil</p>
+            <p id="result-message" class="message" role="status" data-state="neutral">Isi tiga nilai, lalu hitung.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Tugas Pemrograman Berbasis Web, Meeting 4 JavaScript Fundamentals.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
